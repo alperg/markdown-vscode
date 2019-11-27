@@ -1,2 +1,2 @@
 # markdown-vscode
-VSCode extension to copy code as markdown format
+VS Code extension to copy code as markdown format
