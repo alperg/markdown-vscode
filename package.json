@@ -1,0 +1,79 @@
+{
+  "name": "markdown-vscode",
+  "displayName": "Markdown-VSCode",
+  "version": "0.0.1",
+  "description": "Simple and lightweight markdown extension for VS Code: Copy your code as markdown format from within Visual Studio Code.",
+  "icon": "assets/icon.png",
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "install-local": "vsce package && code --install-extension lonsole-cog-0.0.1.vsix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alperg/markdown-vscode"
+  },
+  "keywords": [
+    "slack",
+    "vscode",
+    "slack integration",
+    "vscode to slack"
+  ],
+  "publisher": "alperg",
+  "author": {
+    "name": "Alper Gokcehan",
+    "email": "mail@alperg.com",
+    "url": "https://github.com/alperg/"
+  },
+  "license": "MIT",
+  "activationEvents": [
+    "onCommand:markdownVSCode.copyMarkdown"
+  ],
+  "contributes": {
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "markdownVSCode.copyMarkdown",
+          "group": "9_cutcopypaste"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "when": "editorHasSelection",
+        "command": "markdownVSCode.copyMarkdown",
+        "title": "Markdown-VSCode: Copy selection as markdown"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#FFFFFF",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "bugs": {
+    "url": "https://github.com/alperg/markdown-vscode/issues"
+  },
+  "homepage": "https://github.com/alperg/markdown-vscode/blob/master/README.md",
+  "devDependencies": {
+    "@types/clipboardy": "^1.1.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.8",
+    "mocha": "^6.2.1",
+    "typescript": "^3.6.3",
+    "vscode": "^1.1.36"
+  },
+  "dependencies": {
+    "clipboardy": "^1.2.3"
+  }
+}
