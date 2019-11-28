@@ -14,3 +14,6 @@ No config changes needed for this extension.
 
 ### Feedback / Bug report / feature request
 https://github.com/alperg/markdown-vscode/issues
+
+### Credits
+Extension icon made by [Freepik](https://www.flaticon.com/authors/freepik/ "Freepik") from [flaticon.com](https://www.flaticon.com/ "Flaticon")
