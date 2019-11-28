@@ -1,7 +1,7 @@
 {
   "name": "markdown-vscode",
   "displayName": "Markdown-VSCode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple and lightweight markdown extension for VS Code: Copy your code as markdown format from within Visual Studio Code.",
   "icon": "assets/icon.png",
   "main": "./out/extension.js",
